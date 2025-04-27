@@ -1,0 +1,94 @@
+<div class="w-full z-50">
+  @if(isLabelVisible){
+  <div
+    class="w-full h-fit xl:rounded-lg bg-gradient-to-r from-pink-500 to-violet-500 py-2 px-4 flex justify-end hover:scale-x-105 animate-pulse transition duration-300 ease-in-out"
+  >
+    <div class="w-full justify-center flex items-center">
+      <marquee class="w-fit"
+        ><span class="text-lg font-extrabold px-8 text-gray-50 font-mono"
+          >Al Ansar</span
+        ></marquee
+      >
+    </div>
+    <button
+      (click)="closeLabel()"
+      class="bg-transparent text-white font-bold text-lg rounded-lg hover:scale-110 transition duration-300 ease-in-out"
+    >
+      <i-lucide [img]="close_icon" [size]="30"></i-lucide>
+    </button>
+  </div>
+  }
+  <nav
+    class="w-full bg-white shadow-lg xl:rounded-lg py-2 px-4 flex justify-between items-center bg-gradient-to-br from-gray-950 to-gray-500"
+  >
+    <ul
+      class="flex space-x-6 text-gray-50 font-semibold font-mono text-base sm:text-sm md:text-base lg:text-lg xl:text-xl"
+    >
+      <li
+        class="hover:scale-105 duration-200 transition ease-in-out hover:text-gray-300 cursor-pointer"
+      >
+        Home
+      </li>
+      <li
+        class="hover:scale-105 duration-200 transition ease-in-out hover:text-gray-300 cursor-pointer"
+      >
+        Aboute
+      </li>
+      <li
+        class="hover:scale-105 duration-200 transition ease-in-out hover:text-gray-300 cursor-pointer"
+      >
+        Skills
+      </li>
+      <li
+        class="hover:scale-105 duration-200 transition ease-in-out hover:text-gray-300 cursor-pointer"
+      >
+        Projects
+      </li>
+      <li
+        class="hover:scale-105 duration-200 transition ease-in-out hover:text-gray-300 cursor-pointer"
+      >
+        Contact me
+      </li>
+    </ul>
+    <div
+      class="rounded-full border-2 border-gray-50 p-1 hover:scale-105 duration-200 transition ease-in-out"
+    >
+      <img
+        src="mm.jpg"
+        alt=""
+        class="w-8 h-8 rounded-full shadow-lg"
+        (click)="toggleDropdown()"
+      />
+    </div>
+  </nav>
+  <ng-container *ngIf="isDropdownOpen">
+    <div class="justify-end w-full flex">
+      <div class="bg-white shadow-lg rounded-lg p-4 z-50 w-fit">
+        <ul
+          class="flex flex-col space-y-2 font-semibold font-mono text-base sm:text-sm md:text-base lg:text-lg w-fit"
+        >
+          <li
+            class="text-gray-800 text-lg font-mono hover:scale-105 hover:text-gray-300 transition ease-in duration-150 cursor-pointer"
+          >
+            View Profile
+          </li>
+          <li
+            class="text-gray-800 text-lg font-mono hover:scale-105 hover:text-gray-300 transition ease-in duration-150 cursor-pointer"
+          >
+            LinkedIn
+          </li>
+          <li
+            class="text-gray-800 text-lg font-mono hover:scale-105 hover:text-gray-300 transition ease-in duration-150 cursor-pointer"
+          >
+            GitHub
+          </li>
+          <li
+            class="text-gray-800 text-lg font-mono hover:scale-105 hover:text-gray-300 transition ease-in duration-150 cursor-pointer"
+          >
+            Contact
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-container>
+</div>
