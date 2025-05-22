@@ -1,0 +1,50 @@
+<div class="px-2 py-4 bg-gradient-to-br from-black to-gray-700 rounded-lg my-4">
+  <div class="text-center">
+    <h1
+      class="text-4xl font-bold bg-gradient-to-l from-pink-500 to-violet-500 bg-clip-text text-transparent inline-block hover:scale-x-120 transition duration-300 ease-in-out"
+    >
+      Projects
+    </h1>
+  </div>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-hidden py-6"
+  >
+    @for(i of [1,2,3,4,5]; track $index){
+    <div
+      class="zoomCard bg-black shadow shadow-pink-500/50 rounded-lg hover:scale-105 transition duration-300 ease-in-out px-2 py-4"
+    >
+      <div
+        class="bg-gradient-to-l from-pink-500 to-violet-500 bg-clip-text text-transparent font-mono px-4 font-bold"
+      >
+        <span>Title: </span><span>Project {{ i }}</span>
+      </div>
+      <div
+        class="bg-gradient-to-l from-pink-500 to-violet-500 bg-clip-text text-transparent font-mono px-4 font-bold"
+      >
+        <span>Description: </span><span>Description {{ i }}</span>
+      </div>
+      <div
+        class="bg-gradient-to-l from-pink-500 to-violet-500 bg-clip-text text-transparent font-mono px-4 font-bold"
+      >
+        <span>Technologies: </span><span>Technologies {{ i }}</span>
+      </div>
+      <div
+        class="bg-gradient-to-l from-pink-500 to-violet-500 bg-clip-text text-transparent font-mono px-4 font-bold"
+      >
+        <span>Link: </span><span>Link {{ i }}</span>
+        <br />
+        <br />
+        <button
+          class="bg-gradient-to-l from-pink-500 to-violet-500 hover:scale-x-110 transition duration-300 ease-in-out px-2 py-2 rounded-lg"
+        >
+          <span
+            class="bg-gradient-to-r from-black to-gray-900 bg-clip-text text-transparent"
+          >
+            View Project
+          </span>
+        </button>
+      </div>
+    </div>
+    }
+  </div>
+</div>

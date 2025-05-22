@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from '../compoenents/header/header.component';
-import { FooterComponent } from "../compoenents/footer/footer.component";
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { MainComponent } from "./main/main.component";
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, FooterComponent],
+  imports: [HeaderComponent, FooterComponent, MainComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'M_folio';
+  title = 'Momin';
 }
